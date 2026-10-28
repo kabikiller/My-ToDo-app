@@ -4063,7 +4063,7 @@ secretButton35.addEventListener("click", () => {
 
   const box = document.createElement("div");
   box.style.cssText = `
-    width:min(100%,340px);text-align:center;
+    width:min(100%,420px);text-align:center;
     background:#171719;border:1px solid #66563D;
     border-radius:20px;padding:22px;
     box-sizing:border-box;
