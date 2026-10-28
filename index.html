@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <h1>Todo</h1>
+<div class="calendar">
+  <div class="month-header">
+    <button id="prevMonth">〈</button>
+    <h2 id="month"></h2>
+    <button id="nextMonth">〉</button>
+  </div>
+  <div id="days"></div>
+  <div id="dates"></div>
+</div>
+<div class="schedule">
+  <h3 id="selectedDateTitle">選択した日の予定</h3>
+  <div id="eventList"><p>予定はまだありません</p></div>
+  <button id="addEvent" type="button">＋ 予定を追加</button>
+</div>
+<div id="eventForm" class="event-form" hidden>
+  <h3>新しい予定</h3>
+  <label for="eventTitle">予定のタイトル</label>
+  <input id="eventTitle" type="text" placeholder="例：美容院">
+  <label for="eventTime">開始時間</label>
+  <select id="eventTime"></select>
+  <label for="eventEndTime">終了時間</label>
+  <select id="eventEndTime"></select>
+  <label class="all-day-label">
+    <input id="eventAllDay" type="checkbox">
+    終日
+  </label>
+  <label for="eventCategory">カテゴリー</label>
+  <select id="eventCategory"></select>
+  <label for="eventMemo">メモ</label>
+  <textarea id="eventMemo" placeholder="メモを入力"></textarea>
+  <button id="saveEvent" type="button">保存する</button>
+</div>
+<div class="todo-section">
+  <div class="todo-heading">
+    <h3 id="todoDateTitle">今日のToDo</h3>
+    <span id="todoProgress">0 / 0 完了</span>
+  </div>
+  <div id="todoList"></div>
+  <div class="todo-add">
+    <input id="todoInput" type="text" placeholder="やることを入力">
+    <button id="addTodo" type="button">＋ 追加</button>
+  </div>
+</div>
+<div class="category-section">
+  <button id="toggleCategories" type="button">⚙ カテゴリー管理</button>
+  <div id="categoryManager" hidden>
+    <h3>カテゴリー管理</h3>
+    <div id="categoryList"></div>
+    <label for="newCategoryName">新しいカテゴリー</label>
+    <input id="newCategoryName" type="text" placeholder="例：旅行・勉強・家族">
+    <label>カラーを選択</label>
+    <div id="newCategoryColors" class="color-palette"></div>
+    <input id="newCategoryColor" type="hidden" value="#6B9BD2">
+    <button id="createCategory" type="button">＋ カテゴリーを追加</button>
+  </div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
